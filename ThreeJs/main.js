@@ -16,6 +16,8 @@ loader.load( 'scene.gltf', function ( gltf ) {
     object = gltf.scene;
     scene.add( object );
     camera = gltf.cameras[0];
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
 },
 function(xhr){
     console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' );
