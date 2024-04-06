@@ -3,10 +3,10 @@ import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
 const scene = new THREE.Scene();
 const loader = new GLTFLoader();
-/*const textureLoader = new THREE.TextureLoader();
-textureLoader.load('Autobots.png', function(texture){
+const textureLoader = new THREE.TextureLoader();
+textureLoader.load('background.jfif', function(texture){
     scene.background = texture;
-}); */
+});
 
 const renderer = new THREE.WebGLRenderer();
 renderer.setSize( window.innerWidth, window.innerHeight );
